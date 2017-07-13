@@ -79,6 +79,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             print("Error:\n \(error)")
             return
         }
+    }
 /*
         do {
             let remoteURL = NSURL(string: "http://warsaw-meadow-9763.pancakeapps.com/")!
@@ -131,11 +132,10 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             }
             task.resume()
         }
-*/
-        
+
     
     }
-
+*/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -205,7 +205,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
 
     
-    func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "showMap" {
             let destinationViewController = segue.destination as? MapViewController
@@ -237,7 +237,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         }
         
     }
-    
+
+
 /*
     let appdel : AppDelegate = UIApplication.shared.delegate as! AppDelegate
     //let moc = ViewController().managedObjectContext
@@ -299,4 +300,3 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 */
 
 }
-

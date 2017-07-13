@@ -17,19 +17,24 @@ class MapViewController: UIViewController{
     @IBOutlet var myMap: MKMapView!
     var mapLatitude : Double = 0.0
     var mapLongtitude : Double = 0.0
+    
     var mapTitle: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        var latitude:CLLocationDegrees = 0.000000
+        var longitude:CLLocationDegrees = 0.000000
         let nav = self.navigationController?.navigationBar
 
         nav?.tintColor = UIColor(red: 251/255, green: 197/255, blue: 111/255, alpha: 1)
 
         self.navigationItem.title = mapTitle
+        latitude = mapLatitude
+        longitude = mapLongtitude
+        let myposition = CLLocationCoordinate2DMake(latitude, longitude)
 
-        let myposition = CLLocationCoordinate2D(latitude: mapLatitude, longitude: mapLongtitude)
+        //let myposition = CLLocationCoordinate2D(latitude: mapLatitude, longitude: mapLongtitude)
         let span = MKCoordinateSpanMake(0.005, 0.005)
-        let region = MKCoordinateRegion(center:myposition,span:span)
+        let region = MKCoordinateRegionMake(myposition, span)
 
         myMap.showsUserLocation = true
         myMap.isZoomEnabled = true

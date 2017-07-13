@@ -216,15 +216,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4wg-IK-AWA" customClass="MyMap">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4wg-IK-AWA" customClass="MyMap">
                                 <rect key="frame" x="-4" y="64" width="379" height="546"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.75083892620000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4wg-IK-AWA" firstAttribute="top" secondItem="dOt-V0-Znx" secondAttribute="bottom" id="23U-CJ-t5a"/>
                             <constraint firstAttribute="trailing" secondItem="4wg-IK-AWA" secondAttribute="trailing" id="G0P-w9-RJF"/>
                             <constraint firstItem="4wg-IK-AWA" firstAttribute="leading" secondItem="3LR-DD-afc" secondAttribute="leadingMargin" constant="-20" id="K3o-si-eEi"/>
+                            <constraint firstItem="WxZ-lb-8Cw" firstAttribute="top" secondItem="4wg-IK-AWA" secondAttribute="bottom" constant="8" symbolic="YES" id="SXK-bP-YZJ"/>
                         </constraints>
                     </view>
                     <connections>
