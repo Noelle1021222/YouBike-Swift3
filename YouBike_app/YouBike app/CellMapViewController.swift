@@ -91,6 +91,12 @@ class CellMapViewController: UIViewController,MKMapViewDelegate,CLLocationManage
         let request = MKDirectionsRequest()
         request.source = MKMapItem(placemark: MKPlacemark(coordinate: userCoordinate, addressDictionary: nil))
         request.destination = MKMapItem(placemark: MKPlacemark(coordinate: myposition, addressDictionary: nil))
+        
+//        let route = [request.source,request.destination]
+//        let options = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking]
+//        MKMapItem.openMaps(with: route as! [MKMapItem], launchOptions: options)
+//    }
+
         request.requestsAlternateRoutes = true
         request.transportType = .walking
         let directions = MKDirections(request: request)
@@ -102,11 +108,11 @@ class CellMapViewController: UIViewController,MKMapViewDelegate,CLLocationManage
             let mapRect:MKMapRect = route.polyline.boundingMapRect
             //control region
             self.cellMyMap.setVisibleMapRect(mapRect,edgePadding:UIEdgeInsets(top: 140.0, left: 140.0, bottom: 140.0, right: 140.0),animated: true)
-        
+
             }
         })
     }
-  
+
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer{
 
         let polylineRenderer = MKPolylineRenderer(overlay: (overlay as? MKPolyline)!)

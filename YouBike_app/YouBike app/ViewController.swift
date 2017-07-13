@@ -212,7 +212,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             
             destinationViewController!.mapTitle = subtitle
             destinationViewController!.mapLatitude = latitude
-            
             destinationViewController!.mapLongtitude = longtitude
         }
             
@@ -224,7 +223,6 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             destinationViewController!.mapLongtitude = longtitude
             destinationViewController!.mapStationname = stationname
             destinationViewController!.mapStationposition = stationposition
-            
             destinationViewController!.mapBikeamount = bikeamount
             
             //            destinationViewController?.hidesBottomBarWhenPushed = true
