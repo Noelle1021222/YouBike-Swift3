@@ -193,7 +193,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         
     }
     
-    func MapBtnClicked(sender:UIButton)  {
+    @objc func MapBtnClicked(sender:UIButton)  {
         print(stationsArray[sender.tag].latName)
         latitude = Double(stationsArray[sender.tag].latName)!
         print(latitude)
