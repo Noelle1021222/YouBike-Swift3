@@ -5,6 +5,9 @@ target 'YouBike app' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   pod 'ReachabilitySwift'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
+  pod 'FBSDKShareKit'
   # Pods for YouBike app
 
 end
